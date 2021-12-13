@@ -175,7 +175,12 @@ public final class ImmutableLinkedList implements ImmutableList {
     }
 
     public ImmutableLinkedList addFirst(Object e) {
-        return null;
+        Object[] objects = new Object[this.len + 1];
+        objects[0] = e;
+        for (int i=0; i<this.len; i++){
+            objects[i+1] = this.values[i];
+        }
+        return new ImmutableLinkedList(objects);
     }
 
     public ImmutableLinkedList addLast(Object e) {
