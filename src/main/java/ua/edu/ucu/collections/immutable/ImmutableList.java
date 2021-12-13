@@ -27,6 +27,5 @@ public interface ImmutableList {
 
     Object[] toArray();
 
-    @Override
     String toString();
 }
